@@ -113,30 +113,31 @@ const Reg = () => {
   
   const handleFinalSubmit = async () => {
     if (formStates.length === 0) {
-      toast.error("No team members data.");
+      toast.error("⚠️ No team members provided. Please add at least one member.");
       return;
     }
   
     const teamName = formStates[0].team_name;
     if (!teamName) {
-      toast.error("Team name is required!");
+      toast.error("⚠️ Team name is required.");
       return;
     }
   
-    // Validate required fields for all members
-    for (const member of formStates) {
+    const missingFields = [];
+    for (const [index, member] of formStates.entries()) {
       if (
         !member.full_name || !member.email || !member.university || !member.linkedin ||
         !member.discord_id || !member.phone || !member.national_id || !member.study_field
       ) {
-        toast.error("Please fill in all the required fields!");
-        return;
+        missingFields.push(`Member ${index + 1}`);
       }
     }
   
+    if (missingFields.length > 0) {
+      toast.error(`⚠️ Missing required fields for: ${missingFields.join(', ')}.`);
+      return;
+    }
   
-  
-    // Check for duplicate members (email, Discord ID, national ID)
     const emails = formStates.map(m => m.email);
     const discordIds = formStates.map(m => m.discord_id);
     const nationalIds = formStates.map(m => m.national_id);
@@ -144,10 +145,10 @@ const Reg = () => {
     const { data: duplicateMembers, error: checkError } = await supabase
       .from("members")
       .select("email, discord_id, national_id")
-      .or(`email.in.(${emails.join(',')}),discord_id.in.(${discordIds.join(',')}),national_id.in.(${nationalIds.join(',')})`);
+      .or(`email.in.(${emails.map(e => `"${e}"`).join(',')}),discord_id.in.(${discordIds.map(d => `"${d}"`).join(',')}),national_id.in.(${nationalIds.map(n => `"${n}"`).join(',')})`);
   
     if (checkError) {
-      toast.error("Failed to validate members. Please try again.");
+      toast.error(`❌ Validation failed: ${checkError.message || 'Unknown error'}`);
       return;
     }
   
@@ -158,13 +159,12 @@ const Reg = () => {
         if (discordIds.includes(member.discord_id)) duplicates.push(`Discord ID: ${member.discord_id}`);
         if (nationalIds.includes(member.national_id)) duplicates.push(`National ID: ${member.national_id}`);
       }
-      toast.error(`Duplicate member data found:\n${duplicates.join(', ')}`);
+      toast.error(`⚠️ Duplicate entries found:\n- ${duplicates.join('\n- ')}`);
       return;
     }
   
-    toast.loading("Submitting team data...");
+    toast.loading("🚀 Submitting team data...");
   
-    // Create the new team
     const { data: teamData, error: teamError } = await supabase
       .from("teams")
       .insert({ team_name: teamName })
@@ -173,7 +173,7 @@ const Reg = () => {
   
     if (teamError || !teamData) {
       toast.dismiss();
-      toast.error("Failed to create team. Please try again.");
+      toast.error(`❌ Failed to create team: ${teamError?.message || 'Unknown error'}`);
       return;
     }
   
@@ -203,12 +203,14 @@ const Reg = () => {
     toast.dismiss();
   
     if (membersError) {
-      toast.error("Failed to submit members. Please try again.");
+      toast.error(`❌ Failed to submit members: ${membersError.message || 'Unknown error'}`);
       return;
     }
   
-    toast.success("Team registered successfully!");
+    toast.success("✅ Team registered successfully!");
   };
+  
+
   const sections = formStates.map((_, i) =>
     isSolo ? "Member" : i === 0 ? "Leader" : `Member ${i}`
   );

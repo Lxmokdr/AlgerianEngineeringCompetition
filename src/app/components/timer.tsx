@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import "../globals.css";
 
 export default function Timer() {
-  const targetDate = new Date('2025-05-07T00:00:00').getTime();
+  const targetDate = new Date('2025-05-08T00:00:00').getTime();
   
   const [timeLeft, setTimeLeft] = useState(0);
   const [hasMounted, setHasMounted] = useState(false);
