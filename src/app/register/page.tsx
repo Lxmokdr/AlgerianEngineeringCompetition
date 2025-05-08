@@ -30,7 +30,7 @@ export default function Register() {
         {/* Page Content */}
         <div style={{ backgroundColor: '#0D002B' }} className="relative z-10">
           <Nav />
-          <Reg/>
+          <Regclose/>
         </div>
       </div>
     </ErrorBoundary>

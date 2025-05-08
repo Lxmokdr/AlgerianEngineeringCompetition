@@ -161,7 +161,6 @@ export default function First() {
           <p className="aec text-2xl font-semibold text-white">ENGINEERING</p>
           <p className="aec text-2xl font-semibold text-white">COMPETITION</p>
           <div className="mt-6">
-            <Timer />
           </div>
           <div className="relative "> {/* wrapper of button */}
   <Link href="/register">
