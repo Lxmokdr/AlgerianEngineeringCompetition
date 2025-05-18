@@ -219,7 +219,7 @@ html {
   white-space: nowrap;
   width: max-content;
   height: 200px;  
-  animation: slide 50s linear infinite;
+  animation: slide 10s linear infinite;
 }
 
 .logos-slide-spon img {

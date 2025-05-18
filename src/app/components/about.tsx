@@ -42,30 +42,26 @@ export default function Aboutus() {
       <h1 className="aec text-2xl font-semibold text-[#FFC200] text-center pt-50 ">SPONSORS</h1>
       <div className='logos'>
         <div className='logos-slide-spon bg-indigo-900/50'>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
-        <Image src="/ttaw.png" alt="" width={1000} height={300} className="w-full sm:w-48 md:w-72 lg:w-150"/>
+        <Image src="/tta.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tala.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/cmc.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/caat.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tta.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tala.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/cmc.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/caat.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tta.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tala.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/cmc.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/caat.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tta.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tala.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/cmc.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/caat.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tta.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/tala.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/cmc.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
+        <Image src="/caat.png" alt="" width={1000} height={300} className="w-20 sm:w-28 md:w-36 lg:w-40"/>
         </div>
       </div>
     </div>
